@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="sobel" default="build">
+	<property name="src.dir" value="src"/>
+	<property name="lib.dir" value="lib"/>
+
+	<path id="external.jars">
+		<fileset dir="${lib.dir}" includes="**/*.jar"/>
+	</path>
+	
+	<path id="project.classpath">
+		<pathelement location="${src.dir}"/>
+		<path refid="external.jars" />
+	</path>
+
+
+  <target name="build">
+    <mkdir dir="build.nn"/>
+    <javac srcdir="src.nn"
+           destdir="build.nn"
+           optimize="true"
+           debug="true"
+           deprecation="true"
+					 classpathref="project.classpath">
+    </javac>
+    <jar jarfile="sobel_nn.jar" basedir="build.nn"/>
+  </target>
+
+</project>
