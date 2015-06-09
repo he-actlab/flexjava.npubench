@@ -1,4 +1,4 @@
-BASE_DIR=${HOME}/axbench
+BASE_DIR=${HOME}/flexjava.npubench
 PLANG=${BASE_DIR}/parrot.java/src/ParrotObserver/plang.py
 PARROT_JSON=${BASE_DIR}/parrot.java/src/ParrotObserver/ParrotC.json
 PARROT_LIB=${BASE_DIR}/parrot.java/src/ParrotLib/Parrot
